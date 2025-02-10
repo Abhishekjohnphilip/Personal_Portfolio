@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+<section id="achievements">
+    <h1 class="title">Achievements & Certifications</h1>
+    <div class="achievements-details-container">
+      <div class="achievements-article-container">
+        
+        <article class="achievements-item" data-url="https://www.coursera.org/account/accomplishments/12345">
+          <img class="certificate-icon" src="" alt="Certificate Icon">
+          <div>
+            <h3 class="certificate-title">Full Stack Web Development</h3>
+            <p>Issued by <span class="certificate-provider">Coursera</span> | 2023</p>
+            <a href="#" class="view-certificate">View Credential</a>
+          </div>
+        </article>
+  
+        <article class="achievements-item" data-url="https://www.udemy.com/certificate/67890">
+          <img class="certificate-icon" src="" alt="Certificate Icon">
+          <div>
+            <h3 class="certificate-title">Data Structures & Algorithms</h3>
+            <p>Issued by <span class="certificate-provider">Udemy</span> | 2022</p>
+            <a href="#" class="view-certificate">View Credential</a>
+          </div>
+        </article>
+  
+        <article class="achievements-item" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/front-end-development-libraries">
+          <img class="certificate-icon" src="" alt="Certificate Icon">
+          <div>
+            <h3 class="certificate-title">AI & Machine Learning</h3>
+            <p>Issued by <span class="certificate-provider">edX</span> | 2021</p>
+            <a href="#" class="view-certificate">View Credential</a>
+          </div>
+        </article>
+  
+        <article class="achievements-item" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/front-end-development-libraries">
+          <img class="certificate-icon" src="" alt="Certificate Icon">
+          <div>
+            <h3 class="certificate-title">AI & Machine Learning</h3>
+            <p>Issued by <span class="certificate-provider">edX</span> | 2021</p>
+            <a href="#" class="view-certificate">View Credential</a>
+          </div>
+        </article>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- MODAL FOR CERTIFICATE DETAILS -->
+  <div id="certificate-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Certificate Details</h2>
+      <p><strong>Issued by:</strong> <span id="modal-provider"></span></p>
+      <p><strong>Credential ID:</strong> <span id="modal-id"></span></p>
+      <a id="modal-link" href="#" target="_blank">View Certificate</a>
+    </div>
+  </div>
+  <script src="test.js"></script>
+</body>
+</html>

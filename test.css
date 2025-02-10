@@ -1,0 +1,89 @@
+/* ACHIEVEMENTS SECTION */
+#achievements {
+    padding: 4vh 10rem;
+    text-align: center;
+  }
+  
+  .achievements-article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .achievements-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: left;
+    gap: 1rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .achievements-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .achievements-item img.certificate-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .view-certificate {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* MODAL STYLES */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .modal-content a {
+    display: block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media screen and (max-width: 1024px) {
+    .achievements-article-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .achievements-article-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

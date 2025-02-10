@@ -1,22 +1,20 @@
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-}
-// Function to extract domain from URL
+// Function to get the certificate provider logo dynamically
 function getProviderIcon(url) {
     if (url.includes("coursera.org")) {
-      return "./assets/logos/coursera.png";
+      return "https://upload.wikimedia.org/wikipedia/commons/9/94/Coursera-Logo.png";
     } else if (url.includes("udemy.com")) {
-      return "./assets/logos/udemy-icon.png";
-    } else if (url.includes("freecodecamp.org")) {
-      return "./assets/logos/freecodecamp.png";
+      return "https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg";
     } else if (url.includes("edx.org")) {
       return "https://upload.wikimedia.org/wikipedia/commons/4/4a/EdX_logo.svg";
     } else {
-      return "https://static.vecteezy.com/system/resources/previews/011/318/779/original/certificate-icon-logo-design-png.png"; // Default icon if provider is unknown
+      return "default-certificate.png";
     }
+  }
+  
+  // Function to extract the credential ID from the URL
+  function getCredentialID(url) {
+    const match = url.match(/(\d+)$/); // Extracts last number in the URL as credential ID
+    return match ? match[0] : "N/A";
   }
   
   // Set icons dynamically
@@ -28,21 +26,24 @@ function getProviderIcon(url) {
   
   // Modal functionality
   const modal = document.getElementById("certificate-modal");
-  const modalContent = document.getElementById("certificate-link");
-  const modalProvider = document.getElementById("certificate-provider");
   const modalTitle = document.getElementById("modal-title");
+  const modalProvider = document.getElementById("modal-provider");
+  const modalID = document.getElementById("modal-id");
+  const modalLink = document.getElementById("modal-link");
   
   document.querySelectorAll(".view-certificate").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       const parent = this.closest(".achievements-item");
       const provider = parent.querySelector(".certificate-provider").innerText;
-      const url = parent.getAttribute("data-url");
       const title = parent.querySelector(".certificate-title").innerText;
+      const url = parent.getAttribute("data-url");
+      const credentialID = getCredentialID(url);
   
-      modalProvider.innerText = `Issued by: ${provider}`;
       modalTitle.innerText = title;
-      modalContent.href = url;
+      modalProvider.innerText = provider;
+      modalID.innerText = credentialID;
+      modalLink.href = url;
       modal.style.display = "block";
     });
   });
@@ -59,6 +60,3 @@ function getProviderIcon(url) {
     }
   });
   
-
-
-
