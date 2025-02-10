@@ -623,6 +623,13 @@ article.icon {
   font-size: larger;
 }
 
+@media (max-width: 768px) {
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
 /* .contact-icon{
     cursor: default;
 } */
