@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <!-- <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhishek John Philip | Portfolio</title>
@@ -12,6 +12,34 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/profile-pic (2).png" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/assets/profile-pic (2).png">
     <meta name="description" content="Abhishek John Philip's Portfolio"/>
+  </head> -->
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek John Philip | Portfolio</title>
+    <meta name="description" content="Abhishek John Philip's Portfolio" />
+    <link rel="canonical" href="https://abhishekjohnphilip.vercel.app/" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:url" content="https://abhishekjohnphilip.vercel.app/" />
+    <meta property="og:title" content="Abhishek John Philip | Portfolio" />
+    <meta property="og:description" content="Abhishek John Philip's Portfolio" />
+    <meta property="og:image" content="https://abhishekjohnphilip.vercel.app/assets/profile-pic.png" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abhishek John Philip | Portfolio" />
+    <meta name="twitter:description" content="Abhishek John Philip's Portfolio" />
+    <meta name="twitter:image" content="https://abhishekjohnphilip.vercel.app/assets/profile-pic.png" />
+
+    <!-- Favicon & Apple Touch Icon -->
+    <link rel="icon" type="image/png" href="assets/profile-pic (2).png" />
+    <link rel="apple-touch-icon" href="assets/profile-pic (2).png" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -51,7 +79,7 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Abhishek John Philip</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p2">Software Developer &<br> Full Stack Enthusiast</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -100,7 +128,7 @@
     <section id="about">
       <p class="section__text__p1">Get to Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
+      <div class="section-container" style="width: fit-content;">
         <div class="section__pic-container">
           <img
             src="assets/about1.jpg"
@@ -129,17 +157,12 @@
               <p>Bachelor of Technology<br />Computer Science & Engineering</p>
             </div>
           </div>
-          <div class="text-container">
+          <div class="text-container text-center">
             <p>
-              Hey, I'm Abhishek John Philip, a software developer passionate
-              about crafting engaging digital experiences. With expertise in
-              C++, HTML, CSS, JavaScript, ReactJS, and Python, I specialize in
-              creating responsive websites and seamless APIs during my Backend
-              Developer Internship at Visanka Technologies. Quick to adapt, I'm
-              currently diving into the world of Full Stack development with
-              Node.js and Express. Now I'm Working as Web Developer in Bizpole
-              Business solutions. Let's connect and explore the endless
-              possibilities of web development together!
+              I’m a passionate software developer dedicated to crafting engaging digital experiences. With expertise in C++, HTML, CSS, JavaScript, ReactJS, Python, MySQL, and MongoDB, I specialize in creating responsive websites, building seamless APIs, and managing robust databases—skills I honed during my Backend Developer Internship at Visanka Technologies.<br><br>
+              Quick to adapt and always eager to learn, I later expanded my skill set into full stack development with Node.js and Express. I also gained valuable experience working as a Web Developer at Bizpole Business Solutions, where I contributed to developing robust web applications and enhancing user interfaces.<br><br>
+              In addition to my full-time roles, I actively engage in freelance projects, delivering tailored web development solutions to a diverse range of clients. I invite you to explore my projects section for firsthand examples of my work.<br><br>
+              Let’s connect, collaborate, and turn innovative ideas into impactful digital solutions!
             </p>
           </div>
         </div>
@@ -159,7 +182,7 @@
   <div class="experience-details-container">
     <div class="experience-article-container">
       <article class="experience-item">
-        <img src="https://www.slideserve.com/photo/2072838.jpg" alt="Experience Icon" class="icon">
+        <img src="assets/logos/bizpole-logo.jpg" alt="Experience Icon" class="icon">
         <div>
           <h3>Web Developer</h3>
           <p>Bizpole Business solutions | Jan 2024 - July 2024</p>
@@ -168,10 +191,19 @@
       </article>
 
       <article class="experience-item">
-        <img src="https://media.geeksforgeeks.org/img-practice/PROD/jobs/5/Web/Header/42e1a396-ffa9-4b83-b74c-98225aefd035_1682580751.jpg" alt="Experience Icon" class="icon">
+        <img src="assets/logos/visanka-logo.jpg" alt="Experience Icon" class="icon">
         <div>
           <h3>Backend Developer Intern</h3>
           <p>Visanka Technologies | Sept 2023 - Jan 2024</p>
+          <!-- <p>Designed and developed responsive web applications using HTML, CSS, and JavaScript.</p> -->
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <img src="assets/logos/Freelance-logo-copy3.jpg" alt="Experience Icon" class="icon">
+        <div>
+          <h3>Freelance Web Developer</h3>
+          <p>Jan 2023 - Present</p>
           <!-- <p>Designed and developed responsive web applications using HTML, CSS, and JavaScript.</p> -->
         </div>
       </article>
@@ -197,19 +229,19 @@
       <article class="education-item">
         <img src="https://www.mibs.org.in/images/Home/Logo/logo.png" alt="Education Icon" class="icon">
         <div>
-          <h3>High School Education</h3>
+          <h3>Higher Secondary Education</h3>
           <p>Mar Ivanios Bethany Senior Secondary School | 2016 - 2018</p>
-          <!-- <p>Completed high school education at Mar Ivanios Bethany Senior Secondary School.</p> -->
+          <p>Computer Science (CBSE)</p>
         </div>
       </article>
-      <!-- <article class="education-item">
+      <article class="education-item">
         <img src="https://www.mibs.org.in/images/Home/Logo/logo.png" alt="Education Icon" class="icon">
         <div>
-          <h3>High School Education</h3>
-          <p>Mar Ivanios Bethany Senior Secondary School | 2016 - 2018</p>
-          <p>.</p>
+          <h3>Secondary Education</h3>
+          <p>Mar Ivanios Bethany Senior Secondary School | 2014 - 2016</p>
+          <!-- <p>CBSE</p> -->
         </div>
-      </article> -->
+      </article>
     </div>
   </div>
   
@@ -266,7 +298,7 @@
         </div>
       </article>
 
-      <article class="achievements-item" style="width: auto;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/javascript-algorithms-and-data-structures">
+      <article class="achievements-item" style="width: fit-content;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/javascript-algorithms-and-data-structures">
         <img class="certificate-icon" src="" alt="Certificate Icon">
         <div>
           <h3 class="certificate-title">Legacy JavaScript Algorithms & Data Structures</h3>
