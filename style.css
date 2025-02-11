@@ -535,7 +535,7 @@ article.icon {
   display: block;
   margin-top: 10px;
   color: blue;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .close {
