@@ -63,6 +63,55 @@
       <a id="modal-link" href="#" target="_blank">View Certificate</a>
     </div>
   </div>
+  <section id="projects">
+  <h1 class="section__title">Projects</h1>
+
+  <div class="details-container color_container">
+    <div class="article-container">
+        <img src="assets/projects/Restaurant.png" alt="Project 21" class="project-img" height="1080" />
+    </div>
+    <h2 class="experience-sub-title project-title">Restaurant Website</h2>
+    
+    <div class="btn-container">
+        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Abhishekjohnphilip/restaurant-app'">
+            GitHub
+        </button>
+        <button class="btn btn-color-2 project-btn" onclick="location.href='https://bypassbistro-restaurant.vercel.app/'">
+            Live Demo
+        </button>
+        <button id="toggle-btn" class="btn btn-color-2 project-btn" onclick="toggleDetails()">
+            Show Details
+        </button>
+    </div>
+
+    <div id="project-details" class="project-details hidden">
+        <p>Developed using <strong>React.js</strong> and <strong>Material-UI</strong>, this modern restaurant website offers a seamless user experience with an intuitive UI and mobile-friendly design.</p>
+    </div>
+</div>
+
+
+
+<div class="details-container color_container" onclick="toggleDetails()" onmouseover="showDetails()" onmouseleave="hideDetails()">
+  <div class="article-container">
+      <img src="assets/projects/Restaurant.png" alt="Project 21" class="project-img" height="1080" />
+  </div>
+  <h2 class="experience-sub-title project-title">Restaurant Website</h2>
+  
+  <div class="btn-container">
+      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Abhishekjohnphilip/restaurant-app'; event.stopPropagation();">
+          GitHub
+      </button>
+      <button class="btn btn-color-2 project-btn" onclick="location.href='https://bypassbistro-restaurant.vercel.app/'; event.stopPropagation();">
+          Live Demo
+      </button>
+  </div>
+
+  <div id="project-details" class="project-details">
+      <p>Developed using <strong>React.js</strong> and <strong>Material-UI</strong>, this modern restaurant website offers a seamless user experience with an intuitive UI and mobile-friendly design.</p>
+  </div>
+</div>
+</section>
+
   <script src="test.js"></script>
 </body>
 </html>

@@ -59,4 +59,27 @@ function getProviderIcon(url) {
       modal.style.display = "none";
     }
   });
-  
+//   function toggleDetails() {
+//     var details = document.getElementById("project-details");
+//     var button = document.getElementById("toggle-btn");
+
+//     if (details.style.display === "none" || details.style.display === "") {
+//         details.style.display = "block";
+//         button.textContent = "Hide Details";
+//     } else {
+//         details.style.display = "none";
+//         button.textContent = "Show Details";
+//     }
+// }
+function showDetails() {
+  document.getElementById("project-details").style.display = "block";
+}
+
+function hideDetails() {
+  document.getElementById("project-details").style.display = "none";
+}
+
+function toggleDetails() {
+  var details = document.getElementById("project-details");
+  details.style.display = (details.style.display === "none" || details.style.display === "") ? "block" : "none";
+}
