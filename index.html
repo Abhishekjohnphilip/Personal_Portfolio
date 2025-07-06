@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek John Philip | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <meta property="og:url" content="https://abhishekjohnphilip.vercel.app/" />
-    <meta property="og:image" content="%PUBLIC_URL%/assets/profile-pic (2).png" />
-    <link rel="icon" type="image/png" href="%PUBLIC_URL%/assets/profile-pic (2).png" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/profile-pic (2).png" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/assets/profile-pic (2).png">
-    <meta name="description" content="Abhishek John Philip's Portfolio"/>
-  </head> -->
-  <head>
-    <!-- Essential Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abhishek John Philip | Portfolio</title>
-    <meta name="description" content="Abhishek John Philip's Portfolio" />
-    <link rel="canonical" href="https://abhishekjohnphilip.vercel.app/" />
+    <meta name="description" content="Portfolio of Abhishek John Philip, a Software Developer & Full Stack Enthusiast. Explore my projects, skills, and experience.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
-    <!-- Open Graph Meta Tags for Social Sharing -->
+     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:url" content="https://abhishekjohnphilip.vercel.app/" />
     <meta property="og:title" content="Abhishek John Philip | Portfolio" />
     <meta property="og:description" content="Abhishek John Philip's Portfolio" />
@@ -40,1106 +27,1729 @@
     <!-- Favicon & Apple Touch Icon -->
     <link rel="icon" type="image/png" href="assets/profile-pic (2).png" />
     <link rel="apple-touch-icon" href="assets/profile-pic (2).png" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Abhishek John Philip</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Abhishek John Philip</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <style>
+        /* ===== VARIABLES ===== */
+        /* :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f3f4f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --success: #10b981;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            
+            Dark mode variables
+            --bg-color: #f9fafb;
+            --text-color: #1f2937;
+            --card-bg: #ffffff;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --footer-bg: #1f2937;
+            --footer-text: #ffffff;
+            --skill-bg: #f3f4f6;
+        }
+
+        .dark-theme {
+            --bg-color: #121212;
+            --text-color: #e5e7eb;
+            --card-bg: #1e293b;
+            --header-bg: rgba(30, 41, 59, 0.95);
+            --footer-bg: #0f172a;
+            --footer-text: #e5e7eb;
+            --skill-bg: #1a2536;
+            --secondary: #1a2536;
+        }
+         */
+
+                 :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f3f4f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --success: #10b981;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            
+            /* Light mode variables */
+            --bg-color: #f9fafb;
+            --text-color: #1f2937;
+            --card-bg: #ffffff;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --footer-bg: #1f2937;
+            --footer-text: #ffffff;
+            --skill-bg: #f3f4f6;
+            
+            /* Hero background variables */
+            --hero-gradient-start: rgba(255, 255, 255, 0.1);
+            --hero-gradient-end: rgba(245, 245, 245, 0.1);
+            --hero-pattern: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f9ff"/><path d="M0 0L100 100M100 0L0 100" stroke="%23dbeafe" stroke-width="1"/></svg>');
+        }
+
+        .dark-theme {
+            --bg-color: #121212;
+            --text-color: #e5e7eb;
+            --card-bg: #1e293b;
+            --header-bg: rgba(30, 41, 59, 0.95);
+            --footer-bg: #0f172a;
+            --footer-text: #e5e7eb;
+            --skill-bg: #1a2536;
+            --secondary: #1a2536;
+            
+            /* Dark mode hero background */
+            --hero-gradient-start: rgba(15, 23, 42, 0.1);
+            --hero-gradient-end: rgba(30, 41, 59, 0.1);
+            --hero-pattern: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230f172a"/><path d="M0 0L100 100M100 0L0 100" stroke="%231e293b" stroke-width="1"/></svg>');
+        }
+        
+        /* ===== BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        section {
+            padding: 5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--header-bg);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+        
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+            margin-left: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(15deg);
+        }
+        
+        /* ===== HERO SECTION ===== */
+        /* #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 6rem;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(245,245,245,0.1)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f9ff"/><path d="M0 0L100 100M100 0L0 100" stroke="%23dbeafe" stroke-width="1"/></svg>');
+            background-size: 200px;
+        } */
+                #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 6rem;
+            background-image: 
+                linear-gradient(to bottom, var(--hero-gradient-start), var(--hero-gradient-end)),
+                var(--hero-pattern);
+            background-size: 200px;
+            transition: background-image 0.5s ease;
+            max-width: 100%;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .hero-content h1 span {
+            color: var(--primary);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-socials {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .hero-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: var(--primary);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .hero-socials a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .hero-img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-img-container {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid var(--secondary);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .hero-img-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* ===== ABOUT SECTION ===== */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-img-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .about-img-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+        
+        .about-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .info-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        /* ===== EXPERIENCE SECTION ===== */
+        .experience-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .experience-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .experience-header {
+            padding: 1.5rem;
+            background: var(--primary);
+            color: white;
+        }
+        
+        .experience-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-header p {
+            opacity: 0.9;
+        }
+        
+        .experience-body {
+            padding: 1.5rem;
+        }
+        
+        .experience-body ul {
+            padding-left: 1.5rem;
+        }
+        
+        .experience-body li {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        /* ===== SKILLS SECTION ===== */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .skill-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-item {
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--skill-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        /* ===== PROJECTS SECTION ===== */
+        .projects-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .project-filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1.2rem;
+            background: var(--skill-bg);
+            border: none;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-color);
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .project-content p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tag {
+            background: var(--skill-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        /* ===== CONTACT SECTION ===== */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--skill-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--skill-bg);
+            border-radius: var(--radius);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .footer-socials a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content {
+                order: 2;
+            }
+            
+            .hero-img {
+                order: 1;
+                margin: 0 auto;
+            }
+            
+            .hero-btns {
+                justify-content: center;
+            }
+            
+            .hero-socials {
+                justify-content: center;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-img-container {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .about-info {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 2rem auto 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--header-bg);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .section-title h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-img-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-filters {
+                justify-content: center;
+            }
+            
+            .theme-toggle {
+                position: fixed;
+                top: 1.5rem;
+                right: 5.5rem;
+                z-index: 1001;
+            }
+            .lastname{
+                display: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 3rem 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .project-filters {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .theme-toggle {
+                position: fixed;
+                top: 1.5rem;
+                right: 4.5rem;
+                z-index: 1001;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Abhishek <span class="lastname">John</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h3>Hello, I'm</h3>
+                <h1>Abhishek John Philip <span>👋</span></h1>
+                <p>Software Developer & Full Stack Enthusiast passionate about building innovative web solutions that create real value.</p>
+                
+                <div class="hero-btns">
+                    <a href="./assets/AbhishekJohnPhilip_Resume.pdf" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+                
+                <div class="hero-socials">
+                    <a href="mailto:abhishekjohnphilip@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhishekjohnphilip/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Abhishekjohnphilip" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/+918606016224" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-img">
+                <div class="hero-img-container">
+                    <img src="assets/profile-pic (2).png" alt="Abhishek John Philip" loading="lazy">
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="assets/profile-pic (2).png"
-          alt="Abhishek's profile Picture"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Abhishek John Philip</h1>
-        <p class="section__text__p2">Software Developer &<br> Full Stack Enthusiast</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/AbhishekJohnPhilip_Resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="assets/email-png-icon.jpg"
-            alt="email profile"
-            class="icon"
-            onclick="location.href='mailto:abhishekjohnphilip@gmail.com'"
-          />
-          <img
-            src="assets/linkedin.png"
-            alt="linkedin profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/abhishekjohnphilip/'"
-          />
-          <img
-            src="assets/github.png"
-            alt="github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Abhishekjohnphilip'"
-          />
-          <img
-            src="assets/whatsapp.png"
-            alt="whatsapp profile"
-            class="icon"
-            onclick="location.href='https://wa.me/+918606016224'"
-          />
-        </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='#about'"
-      />
     </section>
+
+    <!-- About Section -->
     <section id="about">
-      <p class="section__text__p1">Get to Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container" style="width: fit-content;">
-        <div class="section__pic-container">
-          <img
-            src="assets/about1.jpg"
-            alt="Profile Picture"
-            class="about-pic rounded-circle"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+        <div class="container">
+            <div class="section-title">
+                <p>Get to Know More</p>
+                <h1>About Me</h1>
             </div>
-            <div class="details-container">
-              <img
-                src="assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Bachelor of Technology<br />Computer Science & Engineering</p>
+            
+            <div class="about-container">
+                <div class="about-img-container">
+                    <img src="assets/about1.jpg" alt="Abhishek John Philip" loading="lazy">
+                </div>
+                
+                <div class="about-content">
+                    <h2>Software Developer & Full Stack Enthusiast</h2>
+                    <p>I'm a passionate software developer dedicated to crafting engaging digital experiences. With expertise in both frontend and backend technologies, I specialize in creating responsive websites, building seamless APIs, and managing robust databases.</p>
+                    <p>Quick to adapt and always eager to learn, I've expanded my skill set into full stack development with Node.js and Express. I've gained valuable experience working as a Web Developer at Dotcon Technologies and through freelance projects, delivering tailored solutions to diverse clients.</p>
+                    
+                    <div class="about-info">
+                        <div class="info-card">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Experience</h3>
+                            <p>3+ years Development</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                            <p>B.Tech Computer Science</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-code"></i>
+                            <h3>Specialization</h3>
+                            <p>Full Stack Development</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-globe"></i>
+                            <h3>Freelance</h3>
+                            <p>Available for Projects</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="text-container text-center">
-            <p>
-              I’m a passionate software developer dedicated to crafting engaging digital experiences. With expertise in C++, HTML, CSS, JavaScript, ReactJS, Python, MySQL, and MongoDB, I specialize in creating responsive websites, building seamless APIs, and managing robust databases—skills I honed during my Backend Developer Internship at Visanka Technologies.<br><br>
-              Quick to adapt and always eager to learn, I later expanded my skill set into full stack development with Node.js and Express. I also gained valuable experience working as a Web Developer at Bizpole Business Solutions, where I contributed to developing robust web applications and enhancing user interfaces.<br><br>
-              In addition to my full-time roles, I actively engage in freelance projects, delivering tailored web development solutions to a diverse range of clients. I invite you to explore my projects section for firsthand examples of my work.<br><br>
-              Let’s connect, collaborate, and turn innovative ideas into impactful digital solutions!
-            </p>
-          </div>
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
     </section>
 
-<!-- EXPERIENCE SECTION--->
-<section id="experience">
-  <p class="section__text__p1">Explore My</p>
-  <h1 class="title">Experience</h1>
-  <div class="experience-details-container">
-    <div class="experience-article-container">
-      <article class="experience-item">
-        <img src="assets/logos/bizpole-logo.jpg" alt="Experience Icon" class="icon">
-        <div>
-          <h3>Web Developer</h3>
-          <p>Bizpole Business solutions | Jan 2024 - July 2024</p>
-          <!-- <p>Worked on front-end and back-end development, optimizing website performance.</p> -->
-        </div>
-      </article>
-
-      <article class="experience-item">
-        <img src="assets/logos/visanka-logo.jpg" alt="Experience Icon" class="icon">
-        <div>
-          <h3>Backend Developer Intern</h3>
-          <p>Visanka Technologies | Sept 2023 - Jan 2024</p>
-          <!-- <p>Designed and developed responsive web applications using HTML, CSS, and JavaScript.</p> -->
-        </div>
-      </article>
-
-      <article class="experience-item">
-        <img src="assets/logos/Freelance-logo-copy3.jpg" alt="Experience Icon" class="icon">
-        <div>
-          <h3>Freelance Web Developer</h3>
-          <p>Jan 2023 - Present</p>
-          <!-- <p>Designed and developed responsive web applications using HTML, CSS, and JavaScript.</p> -->
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION SECTION -->
-<section id="education">
-  <p class="section__text__p1">Explore My</p>
-  <h1 class="title">Education</h1>
-  <div class="education-details-container">
-    <div class="education-article-container">
-      <article class="education-item">
-        <img src="https://logodix.com/logo/868248.jpg" alt="Education Icon" class="icon">
-        <div>
-          <h3>Bachelor of Technology</h3>
-          <p>APJ Abdul Kalam Technological University | 2018 - 2022</p>
-          <p>Computer Science and Engineering.</p>
-        </div>
-      </article>
-
-      <article class="education-item">
-        <img src="https://www.mibs.org.in/images/Home/Logo/logo.png" alt="Education Icon" class="icon">
-        <div>
-          <h3>Higher Secondary Education</h3>
-          <p>Mar Ivanios Bethany Senior Secondary School | 2016 - 2018</p>
-          <p>Computer Science (CBSE)</p>
-        </div>
-      </article>
-      <article class="education-item">
-        <img src="https://www.mibs.org.in/images/Home/Logo/logo.png" alt="Education Icon" class="icon">
-        <div>
-          <h3>Secondary Education</h3>
-          <p>Mar Ivanios Bethany Senior Secondary School | 2014 - 2016</p>
-          <!-- <p>CBSE</p> -->
-        </div>
-      </article>
-    </div>
-  </div>
-  
-</section>
-
-<!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
-<!-- <section id="achievements">
-  <h1 class="title">Achievements & Certifications</h1>
-  <div class="achievements-details-container">
-    <div class="achievements-article-container">
-      <article class="achievements-item">
-        <img src="certificate-icon.png" alt="Certificate Icon" class="icon">
-        <div>
-          <h3>Full Stack Web Development</h3>
-          <p>Issued by Coursera | 2023</p>
-          <p>Completed a professional certification in MERN stack development.</p>
-        </div>
-      </article>
-
-      <article class="achievements-item">
-        <img src="certificate-icon.png" alt="Certificate Icon" class="icon">
-        <div>
-          <h3>Data Structures & Algorithms</h3>
-          <p>Issued by Udemy | 2022</p>
-          <p>Mastered competitive programming techniques and problem-solving skills.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section> -->
-
-<!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
-<section id="achievements">
-  <p class="section__text__p1">Explore My</p>
-  <h1 class="title">Achievements & Certifications</h1>
-  <div class="achievements-details-container">
-    <div class="achievements-article-container">
-      
-      <article class="achievements-item" style="width: auto;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/responsive-web-design">
-        <img class="certificate-icon" src="" alt="Certificate Icon">
-        <div>
-          <h3 class="certificate-title">Responsive Web Design</h3>
-          <p>Issued by <span class="certificate-provider">freeCodeCamp</span> | 2023</p>
-          <a href="#" class="view-certificate">View Credential</a>
-        </div>
-      </article>
-
-      <article class="achievements-item" style="width: auto;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/front-end-development-libraries">
-        <img class="certificate-icon" src="" alt="Certificate Icon">
-        <div>
-          <h3 class="certificate-title">Front End Development Libraries</h3>
-          <p>Issued by <span class="certificate-provider">freeCodeCamp</span> | 2023</p>
-          <a href="#" class="view-certificate">View Credential</a>
-        </div>
-      </article>
-
-      <article class="achievements-item" style="width: fit-content;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/javascript-algorithms-and-data-structures">
-        <img class="certificate-icon" src="" alt="Certificate Icon">
-        <div>
-          <h3 class="certificate-title">Legacy JavaScript Algorithms & Data Structures</h3>
-          <p>Issued by <span class="certificate-provider">freeCodeCamp</span> | 2022</p>
-          <a href="#" class="view-certificate">View Credential</a>
-        </div>
-      </article>
-
-      <article class="achievements-item" style="width: auto;" data-url="https://www.udemy.com/certificate/UC-84f3e1ea-be7f-4880-91a1-a1922ae64c21/">
-        <img class="certificate-icon" src="" alt="Certificate Icon">
-        <div>
-          <h3 class="certificate-title">React.js Premium Crash Course</h3>
-          <p>Issued by <span class="certificate-provider">Udemy</span> | 2025</p>
-          <a href="#" class="view-certificate">View Credential</a>
-        </div>
-      </article>
-
-      <article class="achievements-item" style="width: auto;" data-url="https://www.udemy.com/certificate/UC-0b288e4f-5691-47e6-8881-3c86f0269cc5/">
-        <img class="certificate-icon" src="" alt="Certificate Icon">
-        <div>
-          <h3 class="certificate-title">Node.js Premium Crash Course</h3>
-          <p>Issued by <span class="certificate-provider">Udemy</span> | 2025</p>
-          <a href="#" class="view-certificate">View Credential</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-  <!-- <img src="assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='#achievements'"/> -->
-</section>
-
-<!-- MODAL FOR CREDENTIAL VIEW -->
-<div id="certificate-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 id="modal-title">Certificate Details</h2>
-    <p id="certificate-provider"></p>
-    <a id="certificate-link" href="#" target="_blank">View Certificate</a>
-  </div>
-</div>
-
-
-
-
-    <section id="Skill">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Technical Skills</h1>
-      <div class="skill-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="skill-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ReactJS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Wordpress</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <p>Explore My</p>
+                <h1>Experience</h1>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="skill-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Experienced</p>
+            
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Frontend Developer</h3>
+                        <p>Dotcon Technologies | March 2025 – Present</p>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Developed scalable, SEO-optimized web applications using Next.js, ReactJS, Tailwind CSS, and SCSS</li>
+                            <li>Enhanced application performance with server-side rendering, code splitting, and lazy loading</li>
+                            <li>Collaborated with cross-functional teams to deliver high-quality features on time</li>
+                            <li>Followed best practices in Git version control and QA testing</li>
+                        </ul>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
+                
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Web Developer</h3>
+                        <p>Bizpole Business Solutions | Jan 2024 - July 2024</p>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Built responsive websites with HTML, CSS, Bootstrap, JavaScript, jQuery, ReactJS</li>
+                            <li>Integrated backend services using Node.js and MongoDB for dynamic functionality</li>
+                            <li>Managed website hosting, deployment, and client-specific customizations</li>
+                            <li>Optimized websites for performance and SEO</li>
+                        </ul>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Experienced</p>
+                
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Backend Developer Intern</h3>
+                        <p>Visanka Technologies | Sept 2023 - Jan 2024</p>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Developed robust APIs using Node.js and MySQL for job application platforms</li>
+                            <li>Collaborated with frontend developers to optimize API performance</li>
+                            <li>Conducted code reviews for quality assurance</li>
+                            <li>Implemented database solutions for efficient data management</li>
+                        </ul>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
+                
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Freelance Web Developer</h3>
+                        <p>Jan 2023 - Present</p>
+                    </div>
+                    <div class="experience-body">
+                        <ul>
+                            <li>Delivered client projects with full-cycle development using ReactJS, Node.js, MongoDB, and modern UI libraries</li>
+                            <li>Designed and implemented responsive, user-friendly interfaces aligned with client goals</li>
+                            <li>Created custom websites for diverse clients across various industries</li>
+                            <li>Provided ongoing maintenance and support for existing projects</li>
+                        </ul>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>API</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GIT</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
             </div>
-          </div>
         </div>
-      </div>
-      <!-- <img
-        src="assets/arrow.png"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      /> -->
     </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <p>Explore My</p>
+                <h1>Technical Skills</h1>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML5</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS3</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>ReactJS</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <h4>Bootstrap</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>Tailwind CSS</h4>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend & Databases</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h4>Node.js</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Express.js</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>MySQL</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>MongoDB</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <h4>Git</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <h4>WordPress</h4>
+                            <p>Intermediate</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h4>REST APIs</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4>SEO Optimization</h4>
+                            <p>Advanced</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Responsive Design</h4>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/dreamsdwell.ca_.png"
-                alt="Project 1"
-                class="project-img"
-                height="1080"
-                onclick="location.href='https://dreamsdwell.ca/'"
-              />
+        <div class="container">
+            <div class="section-title">
+                <p>Browse My Recent</p>
+                <h1>Projects</h1>
             </div>
-            <h2 class="experience-sub-title project-title">DreamDwell</h2>
-            <!-- <p class="section__text__p1">A real estate listing website for a client in canada.</p> -->
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://dreamsdwell.ca/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://dreamsdwell.ca/'"
-              >
-                Live Demo
-              </button>
+            
+            <div class="projects-header">
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn" data-filter="freelance">Freelance</button>
+                </div>
             </div>
-          </div>
-
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/netflix.png"
-                alt="Project 2"
-                class="project-img"
-                height="1080"
-              />
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="freelance">
+                    <img src="assets/projects/dreamsdwell.ca_.png" alt="DreamDwell" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>DreamDwell</h3>
+                        <p>A real estate listing website for a client in Canada with property search and filtering features.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://dreamsdwell.ca/" class="btn btn-outline" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="frontend">
+                    <img src="assets/projects/netflix.png" alt="Netflix Clone" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Netflix Clone</h3>
+                        <p>Replica of Netflix streaming platform with movie browsing and trailer playback functionality.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">TMDB API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/Netflix-Clone" class="btn btn-outline" target="_blank">Code</a>
+                            <a href="https://netflix-clone-rxy6-abhishekjohnphilip.vercel.app/" class="btn btn-primary" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="freelance">
+                    <img src="assets/projects/spotdreamerz.png" alt="Spotdreamerz" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Spotdreamerz</h3>
+                        <p>Creative agency website showcasing portfolio and services with modern design elements.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/SpotDreamerz-website" class="btn btn-outline" target="_blank">Code</a>
+                            <a href="https://spot-dreamerz.vercel.app/" class="btn btn-primary" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="ecommerce">
+                    <img src="assets/projects/AmazonClone.png" alt="Amazon Clone" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Amazon Clone</h3>
+                        <p>E-commerce platform with product listings, cart functionality, and user authentication.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Stripe API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/amazon-clone" class="btn btn-outline" target="_blank">Code</a>
+                            <a href="https://clone-f9819.web.app/" class="btn btn-primary" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="freelance">
+                    <img src="assets/projects/kannurmarines.png" alt="Kannur Marines" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Kannur Marines</h3>
+                        <p>Marine services company website with service listings and contact functionality.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">WordPress</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://kannurmarines.com/" class="btn btn-primary" target="_blank">Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="fullstack">
+                    <img src="assets/projects/DailyKart.png" alt="DailyKart" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>DailyKart E-commerce</h3>
+                        <p>Online grocery store with product categories, cart system, and checkout process.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">MERN Stack</span>
+                            <span class="project-tag">Redux</span>
+                            <span class="project-tag">JWT Auth</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/e-commerce-app" class="btn btn-outline" target="_blank">Code</a>
+                            <a href="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" class="btn btn-primary" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="project-card" data-category="frontend">
+                    <img src="assets/projects/Veuz.png" alt="Veuz Travel" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Veuz Travel Website</h3>
+                        <p>Interactive travel website with animated elements and engaging user experience.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">GSAP</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">CSS Animations</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/Task-1-Veuz" class="btn btn-outline" target="_blank">Code</a>
+                            <a href="https://task-1-veuz-abhishekjohnphilips-projects.vercel.app/" class="btn btn-primary" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="project-card" data-category="freelance">
+                    <img src="assets/projects/Habricks.png" alt="Habrick Engineers" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Habrick Engineers</h3>
+                        <p>Corporate website for an architectural firm showcasing services and projects.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://habrickengineersandarchitects.com/" class="btn btn-primary" target="_blank">Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="project-card" data-category="ecommerce">
+                    <img src="assets/projects/HsternDesign.png" alt="Hstren Design" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Hstren Design</h3>
+                        <p>E-commerce platform for a fashion brand with product showcase and CMS integration.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Material-UI</span>
+                            <span class="project-tag">CMS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.hstern.co.in/" class="btn btn-primary" target="_blank">Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 10 -->
+                <div class="project-card" data-category="fullstack">
+                    <img src="assets/projects/IndianDriversSociety.png" alt="Indian Drivers Society" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Indian Drivers Society</h3>
+                        <p>Full-stack membership platform with admin dashboard for vehicle registration.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://indiandriverssociety.in/" class="btn btn-primary" target="_blank">Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 11 -->
+                <div class="project-card" data-category="frontend">
+                    <img src="assets/projects/Restaurant.png" alt="Bypass Bistro" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Bypass Bistro Restaurant</h3>
+                        <p>Interactive restaurant website with menu display and reservation system.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Material-UI</span>
+                            <span class="project-tag">Vite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/restaurant-app" class="btn btn-outline" target="_blank">Code</a>
+                            <a href="https://bypassbistro-restaurant.vercel.app/" class="btn btn-primary" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 12 -->
+                <div class="project-card" data-category="freelance">
+                    <img src="assets/projects/patople.png" alt="Patople" class="project-img" loading="lazy">
+                    <div class="project-content">
+                        <h3>Patople</h3>
+                        <p>Digital platform for patent services with information resources and contact forms.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">WordPress</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://patople.com/" class="btn btn-primary" target="_blank">Live Site</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2 class="experience-sub-title project-title">Netflix Clone</h2>
-            <!-- <p class="section__text__p1">This project is a Netflix clone app that allows users to browse and watch movies and TV shows from various genres and categories.</p> -->
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/Netflix-Clone'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://netflix-clone-rxy6-abhishekjohnphilip.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/spotdreamerz.png"
-                alt="Project 3"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Spotdreamerz</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/SpotDreamerz-website'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://spot-dreamerz.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/jupiterTravels.png"
-                alt="Project 4"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Jupiter Travels</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://jupiterplr.nicepage.io/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://jupiterplr.nicepage.io/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/extrancewebsite (1).png"
-                alt="Project 5"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">SciAstra</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/Sciastra_Website'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://sciastra-website.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/portfolio.png"
-                alt="Project 6"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Personal Portfolio
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/Personal_Portfolio'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://abhishekjohnphilip-portfolio.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/patople.png"
-                alt="Project 7"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Patople</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://patople.com/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://patople.com'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/A2Zeventsindia.png"
-                alt="Project 8"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">A2Zeventsindia</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://a2zeventsindia.in/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://a2zeventsindia.in/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/VibuVentures.png"
-                alt="Project 9"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">VibuVentures</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://vibuventure.com/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://vibuventure.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/kannurmarines.png"
-                alt="Project 10"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Kannur Marines</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://kannurmarines.com/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://kannurmarines.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/DealMakersExporteria.png"
-                alt="Project 11"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Deal Makers Exporteria
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://dealmakersexporteria.com/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://dealmakersexporteria.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/IndianDriversSociety.png"
-                alt="Project 12"
-                class="project-img"
-                height="1080"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Indian Drivers Society
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://indiandriverssociety.in/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://indiandriverssociety.in/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/Habricks.png"
-                alt="Project 13"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="100%" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Habricks Engineers and Architects
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://habrickengineersandarchitects.com/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://habrickengineersandarchitects.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/MarvixSteel.png"
-                alt="Project 14"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://habrickengineersandarchitects.com/" width="100%" height="100%" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Marvix Steel Solutions
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://marvix-steel.vercel.app/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://marvix-steel.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/AmazonClone.png"
-                alt="Project 15"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Amazon Clone E-Commerce Website
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://clone-f9819.web.app/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://clone-f9819.web.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/HsternDesign.png"
-                alt="Project 16"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://www.hstern.co.in/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Hstern Design
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.hstern.co.in/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.hstern.co.in/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/GalleryApp.png"
-                alt="Project 17"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Gallery App
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/image_gallery_app'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://image-gallery-app-abhishekjohnphilips-projects.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/Veuz.png"
-                alt="Project 18"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Veuz Travel Website
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/Task-1-Veuz'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://task-1-veuz-abhishekjohnphilips-projects.vercel.app/'" 
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/ReminderApp.png"
-                alt="Project 19"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Reminder App
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/reminder_app'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://reminder-app-abhishekjohnphilips-projects.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/DailyKart.png"
-                alt="Project 20"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Dailykark E-commerce Website
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-
-          <div class="details-container color_container">
-            <div class="article-container">
-              <img
-                src="assets/projects/Restaurant.png"
-                alt="Project 21"
-                class="project-img"
-                height="1080"
-              />
-              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Restaurant Website
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abhishekjohnphilip/restaurant-app'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://bypassbistro-restaurant.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <a href="mailto:abhishekjohnphilip@gmail.com">
-            <img
-              src="assets/email.png"
-              alt="Email Icon"
-              class="icon contact-icon email-icon"
-          /></a>
-          <p>
-            <a href="mailto:abhishekjohnphilip@gmail.com"
-              >abhishekjohnphilip@gmail.com</a
-            >
-          </p>
+        <div class="container">
+            <div class="section-title">
+                <p>Get in Touch</p>
+                <h1>Contact Me</h1>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>abhishekjohnphilip@gmail.com</p>
+                            <a href="mailto:abhishekjohnphilip@gmail.com">Send Message</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me professionally</p>
+                            <a href="https://www.linkedin.com/in/abhishekjohnphilip/" target="_blank">Visit Profile</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>+91 8606016224</p>
+                            <a href="https://wa.me/+918606016224" target="_blank">Start Chat</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="contact-info-container">
-          <a href="https://www.linkedin.com/in/abhishekjohnphilip/">
-            <img
-              src="assets/linkedin.png"
-              alt="LinkedIn Icon"
-              class="icon contact-icon"
-          /></a>
-          <p>
-            <a href="https://www.linkedin.com/in/abhishekjohnphilip/"
-              >LinkedIn</a
-            >
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <a href="https://wa.me/+918606016224">
-            <img
-              src="assets/whatsapp.png"
-              alt="LinkedIn Icon"
-              class="icon contact-icon"
-          /></a>
-          <p>
-            <a href="https://wa.me/918606016224"
-              >WhatsApp</a
-            >
-          </p>
-        </div>
-      </div>
     </section>
+
+    <!-- Footer -->
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <div class="footer-content">
+            <div class="footer-logo">Abhishek John Philip</div>
+            
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="mailto:abhishekjohnphilip@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/abhishekjohnphilip/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Abhishekjohnphilip" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://wa.me/+918606016224" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            
+            <p class="copyright">© <span id="current-year"></span> Abhishek John Philip. All rights reserved.</p>
         </div>
-      </nav>
-      <p>Copyright &#169; <script>document.write(new Date().getFullYear());</script> Abhishek John Philip. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
-  </body>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('show') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Active nav link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Project Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Form data would be sent to server here
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Dark/Light mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+            themeToggle.innerHTML = savedTheme === 'dark-theme' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                localStorage.setItem('theme', '');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+</body>
 </html>

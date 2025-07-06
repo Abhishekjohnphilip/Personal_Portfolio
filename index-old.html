@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek John Philip | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta property="og:url" content="https://abhishekjohnphilip.vercel.app/" />
+    <meta property="og:image" content="%PUBLIC_URL%/assets/profile-pic (2).png" />
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/assets/profile-pic (2).png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/profile-pic (2).png" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/assets/profile-pic (2).png">
+    <meta name="description" content="Abhishek John Philip's Portfolio"/>
+  </head> -->
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek John Philip | Portfolio</title>
+    <meta name="description" content="Abhishek John Philip's Portfolio" />
+    <link rel="canonical" href="https://abhishekjohnphilip.vercel.app/" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:url" content="https://abhishekjohnphilip.vercel.app/" />
+    <meta property="og:title" content="Abhishek John Philip | Portfolio" />
+    <meta property="og:description" content="Abhishek John Philip's Portfolio" />
+    <meta property="og:image" content="https://abhishekjohnphilip.vercel.app/assets/logos/Freelance-logo-copy3.jpg" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abhishek John Philip | Portfolio" />
+    <meta name="twitter:description" content="Abhishek John Philip's Portfolio" />
+    <meta name="twitter:image" content="https://abhishekjohnphilip.vercel.app/assets/logos/Freelance-logo-copy3.jpg" />
+
+    <!-- Favicon & Apple Touch Icon -->
+    <link rel="icon" type="image/png" href="assets/profile-pic (2).png" />
+    <link rel="apple-touch-icon" href="assets/profile-pic (2).png" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Abhishek John Philip</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Abhishek John Philip</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="assets/profile-pic (2).png"
+          alt="Abhishek's profile Picture"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Abhishek John Philip</h1>
+        <p class="section__text__p2">Software Developer &<br> Full Stack Enthusiast</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/AbhishekJohnPhilip_Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="assets/email-png-icon.jpg"
+            alt="email profile"
+            class="icon"
+            onclick="location.href='mailto:abhishekjohnphilip@gmail.com'"
+          />
+          <img
+            src="assets/linkedin.png"
+            alt="linkedin profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/abhishekjohnphilip/')"
+          />
+          <img
+            src="assets/github.png"
+            alt="github profile"
+            class="icon"
+            onclick="window.open('https://github.com/Abhishekjohnphilip')"
+          />
+          <img
+            src="assets/whatsapp.png"
+            alt="whatsapp profile"
+            class="icon"
+            onclick="window.open('https://wa.me/+918606016224')"
+          />
+        </div>
+      </div>
+      <img
+        src="assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#about'"
+      />
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get to Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container" style="width: fit-content;">
+        <div class="section__pic-container">
+          <img
+            src="assets/about1.jpg"
+            alt="Profile Picture"
+            class="about-pic rounded-circle"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Technology<br />Computer Science & Engineering</p>
+            </div>
+          </div>
+          <div class="text-container text-center">
+            <p>
+              I’m a passionate software developer dedicated to crafting engaging digital experiences. With expertise in C++, HTML, CSS, JavaScript, ReactJS, Python, MySQL, and MongoDB, I specialize in creating responsive websites, building seamless APIs, and managing robust databases—skills I honed during my Backend Developer Internship at Visanka Technologies.<br><br>
+              Quick to adapt and always eager to learn, I later expanded my skill set into full stack development with Node.js and Express. I also gained valuable experience working as a Web Developer at Bizpole Business Solutions, where I contributed to developing robust web applications and enhancing user interfaces.<br><br>
+              In addition to my full-time roles, I actively engage in freelance projects, delivering tailored web development solutions to a diverse range of clients. I invite you to explore my projects section for firsthand examples of my work.<br><br>
+              Let’s connect, collaborate, and turn innovative ideas into impactful digital solutions!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+      />
+    </section>
+
+<!-- EXPERIENCE SECTION--->
+<section id="experience">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Experience</h1>
+  <div class="experience-details-container">
+    <div class="experience-article-container">
+      <article class="experience-item">
+        <img src="assets/logos/bizpole-logo.jpg" alt="Experience Icon" class="icon">
+        <div>
+          <h3>Web Developer</h3>
+          <p>Bizpole Business solutions | Jan 2024 - July 2024</p>
+          <!-- <p>Worked on front-end and back-end development, optimizing website performance.</p> -->
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <img src="assets/logos/visanka-logo.jpg" alt="Experience Icon" class="icon">
+        <div>
+          <h3>Backend Developer Intern</h3>
+          <p>Visanka Technologies | Sept 2023 - Jan 2024</p>
+          <!-- <p>Designed and developed responsive web applications using HTML, CSS, and JavaScript.</p> -->
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <img src="assets/logos/Freelance-logo-copy3.jpg" alt="Experience Icon" class="icon">
+        <div>
+          <h3>Freelance Web Developer</h3>
+          <p>Jan 2023 - Present</p>
+          <!-- <p>Designed and developed responsive web applications using HTML, CSS, and JavaScript.</p> -->
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION SECTION -->
+<section id="education">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Education</h1>
+  <div class="education-details-container">
+    <div class="education-article-container">
+      <article class="education-item">
+        <img src="https://logodix.com/logo/868248.jpg" alt="Education Icon" class="icon">
+        <div>
+          <h3>Bachelor of Technology</h3>
+          <p>APJ Abdul Kalam Technological University | 2018 - 2022</p>
+          <p>Computer Science and Engineering.</p>
+        </div>
+      </article>
+
+      <article class="education-item">
+        <img src="https://www.mibs.org.in/images/Home/Logo/logo.png" alt="Education Icon" class="icon">
+        <div>
+          <h3>Higher Secondary Education</h3>
+          <p>Mar Ivanios Bethany Senior Secondary School | 2016 - 2018</p>
+          <p>Computer Science (CBSE)</p>
+        </div>
+      </article>
+      <article class="education-item">
+        <img src="https://www.mibs.org.in/images/Home/Logo/logo.png" alt="Education Icon" class="icon">
+        <div>
+          <h3>Secondary Education</h3>
+          <p>Mar Ivanios Bethany Senior Secondary School | 2014 - 2016</p>
+          <!-- <p>CBSE</p> -->
+        </div>
+      </article>
+    </div>
+  </div>
+  
+</section>
+
+<!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+<!-- <section id="achievements">
+  <h1 class="title">Achievements & Certifications</h1>
+  <div class="achievements-details-container">
+    <div class="achievements-article-container">
+      <article class="achievements-item">
+        <img src="certificate-icon.png" alt="Certificate Icon" class="icon">
+        <div>
+          <h3>Full Stack Web Development</h3>
+          <p>Issued by Coursera | 2023</p>
+          <p>Completed a professional certification in MERN stack development.</p>
+        </div>
+      </article>
+
+      <article class="achievements-item">
+        <img src="certificate-icon.png" alt="Certificate Icon" class="icon">
+        <div>
+          <h3>Data Structures & Algorithms</h3>
+          <p>Issued by Udemy | 2022</p>
+          <p>Mastered competitive programming techniques and problem-solving skills.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section> -->
+
+<!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+<section id="achievements">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Achievements & Certifications</h1>
+  <div class="achievements-details-container">
+    <div class="achievements-article-container">
+      
+      <article class="achievements-item" style="width: auto;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/responsive-web-design">
+        <img class="certificate-icon" src="" alt="Certificate Icon">
+        <div>
+          <h3 class="certificate-title">Responsive Web Design</h3>
+          <p>Issued by <span class="certificate-provider">freeCodeCamp</span> | 2023</p>
+          <a href="#" class="view-certificate">View Credential</a>
+        </div>
+      </article>
+
+      <article class="achievements-item" style="width: auto;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/front-end-development-libraries">
+        <img class="certificate-icon" src="" alt="Certificate Icon">
+        <div>
+          <h3 class="certificate-title">Front End Development Libraries</h3>
+          <p>Issued by <span class="certificate-provider">freeCodeCamp</span> | 2023</p>
+          <a href="#" class="view-certificate">View Credential</a>
+        </div>
+      </article>
+
+      <article class="achievements-item" style="width: fit-content;" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/javascript-algorithms-and-data-structures">
+        <img class="certificate-icon" src="" alt="Certificate Icon">
+        <div>
+          <h3 class="certificate-title">Legacy JavaScript Algorithms & Data Structures</h3>
+          <p>Issued by <span class="certificate-provider">freeCodeCamp</span> | 2022</p>
+          <a href="#" class="view-certificate">View Credential</a>
+        </div>
+      </article>
+
+      <article class="achievements-item" style="width: auto;" data-url="https://www.udemy.com/certificate/UC-84f3e1ea-be7f-4880-91a1-a1922ae64c21/">
+        <img class="certificate-icon" src="" alt="Certificate Icon">
+        <div>
+          <h3 class="certificate-title">React.js Premium Crash Course</h3>
+          <p>Issued by <span class="certificate-provider">Udemy</span> | 2025</p>
+          <a href="#" class="view-certificate">View Credential</a>
+        </div>
+      </article>
+
+      <article class="achievements-item" style="width: auto;" data-url="https://www.udemy.com/certificate/UC-0b288e4f-5691-47e6-8881-3c86f0269cc5/">
+        <img class="certificate-icon" src="" alt="Certificate Icon">
+        <div>
+          <h3 class="certificate-title">Node.js Premium Crash Course</h3>
+          <p>Issued by <span class="certificate-provider">Udemy</span> | 2025</p>
+          <a href="#" class="view-certificate">View Credential</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+  <!-- <img src="assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='#achievements'"/> -->
+</section>
+
+<!-- MODAL FOR CREDENTIAL VIEW -->
+<div id="certificate-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-title">Certificate Details</h2>
+    <p id="certificate-provider"></p>
+    <a id="certificate-link" href="#" target="_blank">View Certificate</a>
+  </div>
+</div>
+
+
+
+
+    <section id="Skill">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Technical Skills</h1>
+      <div class="skill-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="skill-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>ReactJS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Wordpress</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="skill-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>API</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GIT</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <img
+        src="assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      /> -->
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/dreamsdwell.ca_.png"
+                alt="Project 1"
+                class="project-img"
+                height="1080"
+                onclick="location.href='https://dreamsdwell.ca/'"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">DreamDwell</h2>
+            <!-- <p class="section__text__p1">A real estate listing website for a client in canada.</p> -->
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dreamsdwell.ca/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dreamsdwell.ca/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/netflix.png"
+                alt="Project 2"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Netflix Clone</h2>
+            <!-- <p class="section__text__p1">This project is a Netflix clone app that allows users to browse and watch movies and TV shows from various genres and categories.</p> -->
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/Netflix-Clone'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://netflix-clone-rxy6-abhishekjohnphilip.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/spotdreamerz.png"
+                alt="Project 3"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Spotdreamerz</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/SpotDreamerz-website'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://spot-dreamerz.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/jupiterTravels.png"
+                alt="Project 4"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Jupiter Travels</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://jupiterplr.nicepage.io/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://jupiterplr.nicepage.io/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/extrancewebsite (1).png"
+                alt="Project 5"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">SciAstra</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/Sciastra_Website'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://sciastra-website.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/portfolio.png"
+                alt="Project 6"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Personal Portfolio
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/Personal_Portfolio'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://abhishekjohnphilip-portfolio.netlify.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/patople.png"
+                alt="Project 7"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Patople</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://patople.com/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://patople.com'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/A2Zeventsindia.png"
+                alt="Project 8"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">A2Zeventsindia</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://a2zeventsindia.in/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://a2zeventsindia.in/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/VibuVentures.png"
+                alt="Project 9"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">VibuVentures</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://vibuventure.com/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://vibuventure.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/kannurmarines.png"
+                alt="Project 10"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Kannur Marines</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://kannurmarines.com/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://kannurmarines.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/DealMakersExporteria.png"
+                alt="Project 11"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Deal Makers Exporteria
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dealmakersexporteria.com/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dealmakersexporteria.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/IndianDriversSociety.png"
+                alt="Project 12"
+                class="project-img"
+                height="1080"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Indian Drivers Society
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://indiandriverssociety.in/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://indiandriverssociety.in/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/Habricks.png"
+                alt="Project 13"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="100%" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Habricks Engineers and Architects
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://habrickengineersandarchitects.com/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://habrickengineersandarchitects.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/MarvixSteel.png"
+                alt="Project 14"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://habrickengineersandarchitects.com/" width="100%" height="100%" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Marvix Steel Solutions
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://marvix-steel.vercel.app/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://marvix-steel.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/AmazonClone.png"
+                alt="Project 15"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Amazon Clone E-Commerce Website
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://clone-f9819.web.app/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://clone-f9819.web.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/HsternDesign.png"
+                alt="Project 16"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://www.hstern.co.in/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Hstern Design
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.hstern.co.in/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.hstern.co.in/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/GalleryApp.png"
+                alt="Project 17"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Gallery App
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/image_gallery_app'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://image-gallery-app-abhishekjohnphilips-projects.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/Veuz.png"
+                alt="Project 18"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Veuz Travel Website
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/Task-1-Veuz'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://task-1-veuz-abhishekjohnphilips-projects.vercel.app/'" 
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/ReminderApp.png"
+                alt="Project 19"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Reminder App
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/reminder_app'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://reminder-app-abhishekjohnphilips-projects.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/DailyKart.png"
+                alt="Project 20"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Dailykark E-commerce Website
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+
+          <div class="details-container color_container">
+            <div class="article-container">
+              <img
+                src="assets/projects/Restaurant.png"
+                alt="Project 21"
+                class="project-img"
+                height="1080"
+              />
+              <!-- <iframe src="https://e-commerce-app-abhishekjohnphilips-projects.vercel.app/" width="100%" height="" scrolling="no" class="iframecontent"></iframe> -->
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Restaurant Website
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Abhishekjohnphilip/restaurant-app'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://bypassbistro-restaurant.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <img
+        src="assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <a href="mailto:abhishekjohnphilip@gmail.com">
+            <img
+              src="assets/email.png"
+              alt="Email Icon"
+              class="icon contact-icon email-icon"
+          /></a>
+          <p>
+            <a href="mailto:abhishekjohnphilip@gmail.com"
+              >abhishekjohnphilip@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <a href="https://www.linkedin.com/in/abhishekjohnphilip/">
+            <img
+              src="assets/linkedin.png"
+              alt="LinkedIn Icon"
+              class="icon contact-icon"
+          /></a>
+          <p>
+            <a href="https://www.linkedin.com/in/abhishekjohnphilip/"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <a href="https://wa.me/+918606016224">
+            <img
+              src="assets/whatsapp.png"
+              alt="LinkedIn Icon"
+              class="icon contact-icon"
+          /></a>
+          <p>
+            <a href="https://wa.me/918606016224"
+              >WhatsApp</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; <script>document.write(new Date().getFullYear());</script> Abhishek John Philip. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

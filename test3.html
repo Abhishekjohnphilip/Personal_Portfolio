@@ -1,120 +1,3 @@
-<!-- {/*<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="test.css">
-</head>
-<body>
-
-<section id="achievements">
-    <h1 class="title">Achievements & Certifications</h1>
-    <div class="achievements-details-container">
-      <div class="achievements-article-container">
-        
-        <article class="achievements-item" data-url="https://www.coursera.org/account/accomplishments/12345">
-          <img class="certificate-icon" src="" alt="Certificate Icon">
-          <div>
-            <h3 class="certificate-title">Full Stack Web Development</h3>
-            <p>Issued by <span class="certificate-provider">Coursera</span> | 2023</p>
-            <a href="#" class="view-certificate">View Credential</a>
-          </div>
-        </article>
-  
-        <article class="achievements-item" data-url="https://www.udemy.com/certificate/67890">
-          <img class="certificate-icon" src="" alt="Certificate Icon">
-          <div>
-            <h3 class="certificate-title">Data Structures & Algorithms</h3>
-            <p>Issued by <span class="certificate-provider">Udemy</span> | 2022</p>
-            <a href="#" class="view-certificate">View Credential</a>
-          </div>
-        </article>
-  
-        <article class="achievements-item" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/front-end-development-libraries">
-          <img class="certificate-icon" src="" alt="Certificate Icon">
-          <div>
-            <h3 class="certificate-title">AI & Machine Learning</h3>
-            <p>Issued by <span class="certificate-provider">edX</span> | 2021</p>
-            <a href="#" class="view-certificate">View Credential</a>
-          </div>
-        </article>
-  
-        <article class="achievements-item" data-url="https://www.freecodecamp.org/certification/Abhishek_John_Philip/front-end-development-libraries">
-          <img class="certificate-icon" src="" alt="Certificate Icon">
-          <div>
-            <h3 class="certificate-title">AI & Machine Learning</h3>
-            <p>Issued by <span class="certificate-provider">edX</span> | 2021</p>
-            <a href="#" class="view-certificate">View Credential</a>
-          </div>
-        </article>
-  
-      </div>
-    </div>
-  </section>
-  
-
-  <div id="certificate-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="modal-title">Certificate Details</h2>
-      <p><strong>Issued by:</strong> <span id="modal-provider"></span></p>
-      <p><strong>Credential ID:</strong> <span id="modal-id"></span></p>
-      <a id="modal-link" href="#" target="_blank">View Certificate</a>
-    </div>
-  </div>
-  <section id="projects">
-  <h1 class="section__title">Projects</h1>
-
-  <div class="details-container color_container">
-    <div class="article-container">
-        <img src="assets/projects/Restaurant.png" alt="Project 21" class="project-img" height="1080" />
-    </div>
-    <h2 class="experience-sub-title project-title">Restaurant Website</h2>
-    
-    <div class="btn-container">
-        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Abhishekjohnphilip/restaurant-app'">
-            GitHub
-        </button>
-        <button class="btn btn-color-2 project-btn" onclick="location.href='https://bypassbistro-restaurant.vercel.app/'">
-            Live Demo
-        </button>
-        <button id="toggle-btn" class="btn btn-color-2 project-btn" onclick="toggleDetails()">
-            Show Details
-        </button>
-    </div>
-
-    <div id="project-details" class="project-details hidden">
-        <p>Developed using <strong>React.js</strong> and <strong>Material-UI</strong>, this modern restaurant website offers a seamless user experience with an intuitive UI and mobile-friendly design.</p>
-    </div>
-</div>
-
-
-
-<div class="details-container color_container" onclick="toggleDetails()" onmouseover="showDetails()" onmouseleave="hideDetails()">
-  <div class="article-container">
-      <img src="assets/projects/Restaurant.png" alt="Project 21" class="project-img" height="1080" />
-  </div>
-  <h2 class="experience-sub-title project-title">Restaurant Website</h2>
-  
-  <div class="btn-container">
-      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Abhishekjohnphilip/restaurant-app'; event.stopPropagation();">
-          GitHub
-      </button>
-      <button class="btn btn-color-2 project-btn" onclick="location.href='https://bypassbistro-restaurant.vercel.app/'; event.stopPropagation();">
-          Live Demo
-      </button>
-  </div>
-
-  <div id="project-details" class="project-details">
-      <p>Developed using <strong>React.js</strong> and <strong>Material-UI</strong>, this modern restaurant website offers a seamless user experience with an intuitive UI and mobile-friendly design.</p>
-  </div>
-</div>
-</section>
-
-  <script src="test.js"></script>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek John Philip | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ===== VARIABLES ===== */
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
@@ -135,8 +20,24 @@
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
             --radius: 8px;
+            
+            /* Light mode defaults */
+            --bg-color: #f9fafb;
+            --text-color: #1f2937;
+            --card-bg: #ffffff;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --footer-bg: #1f2937;
+        }
+
+        .dark-mode {
+            --bg-color: #121826;
+            --text-color: #e5e7eb;
+            --card-bg: #1f2937;
+            --header-bg: rgba(18, 24, 38, 0.95);
+            --footer-bg: #0d1117;
         }
         
+        /* ===== BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -146,9 +47,10 @@
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
+            color: var(--text-color);
+            background-color: var(--bg-color);
             overflow-x: hidden;
+            transition: background-color 0.3s ease;
         }
         
         html {
@@ -177,7 +79,7 @@
         .section-title h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--text-color);
             margin-bottom: 0.5rem;
         }
         
@@ -235,13 +137,14 @@
             box-shadow: var(--shadow-lg);
         }
         
+        /* ===== HEADER & NAVIGATION ===== */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--header-bg);
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
@@ -270,7 +173,7 @@
         
         .nav-links a {
             text-decoration: none;
-            color: var(--dark);
+            color: var(--text-color);
             font-weight: 500;
             position: relative;
             padding: 0.5rem 0;
@@ -304,15 +207,32 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--dark);
+            color: var(--text-color);
+            z-index: 1100;
         }
         
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: var(--text-color);
+            margin-left: 1rem;
+            transition: var(--transition);
+        }
+        
+        .theme-toggle:hover {
+            color: var(--primary);
+            transform: rotate(20deg);
+        }
+        
+        /* ===== HERO SECTION ===== */
         #hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding-top: 6rem;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(245,245,245,0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f9ff"/><path d="M0 0L100 100M100 0L0 100" stroke="%23dbeafe" stroke-width="1"/></svg>');
+            background: linear-gradient(to bottom, rgba(var(--bg-color-rgb), 0.9), rgba(var(--bg-color-rgb), 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23121826"/><path d="M0 0L100 100M100 0L0 100" stroke="%232563eb" stroke-width="1" opacity="0.1"/></svg>');
             background-size: 200px;
         }
         
@@ -334,7 +254,7 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 1.5rem;
-            color: var(--dark);
+            color: var(--text-color);
         }
         
         .hero-content h1 span {
@@ -366,11 +286,12 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: var(--secondary);
+            background: var(--card-bg);
             color: var(--primary);
             font-size: 1.2rem;
             transition: var(--transition);
             text-decoration: none;
+            box-shadow: var(--shadow);
         }
         
         .hero-socials a:hover {
@@ -390,7 +311,7 @@
             height: 350px;
             border-radius: 50%;
             overflow: hidden;
-            border: 8px solid var(--secondary);
+            border: 8px solid var(--card-bg);
             box-shadow: var(--shadow-lg);
         }
         
@@ -405,6 +326,7 @@
             transform: scale(1.05);
         }
         
+        /* ===== ABOUT SECTION ===== */
         .about-container {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -432,7 +354,7 @@
         .about-content h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: var(--dark);
+            color: var(--text-color);
         }
         
         .about-content p {
@@ -448,16 +370,17 @@
         }
         
         .info-card {
-            background: var(--secondary);
+            background: var(--card-bg);
             padding: 1.5rem;
             border-radius: var(--radius);
             text-align: center;
             transition: var(--transition);
+            box-shadow: var(--shadow);
         }
         
         .info-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
         }
         
         .info-card i {
@@ -469,8 +392,10 @@
         .info-card h3 {
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
+            color: var(--text-color);
         }
         
+        /* ===== EXPERIENCE SECTION ===== */
         .experience-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -478,7 +403,7 @@
         }
         
         .experience-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -515,8 +440,10 @@
         
         .experience-body li {
             margin-bottom: 0.5rem;
+            color: var(--text-color);
         }
         
+        /* ===== SKILLS SECTION ===== */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -524,7 +451,7 @@
         }
         
         .skill-category {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 2rem;
             box-shadow: var(--shadow);
@@ -568,7 +495,7 @@
         .skill-icon {
             width: 70px;
             height: 70px;
-            background: var(--secondary);
+            background: var(--card-bg);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -576,8 +503,10 @@
             margin: 0 auto 1rem;
             font-size: 1.8rem;
             color: var(--primary);
+            box-shadow: var(--shadow);
         }
         
+        /* ===== PROJECTS SECTION ===== */
         .projects-header {
             display: flex;
             justify-content: space-between;
@@ -595,12 +524,14 @@
         
         .filter-btn {
             padding: 0.5rem 1.2rem;
-            background: var(--secondary);
+            background: var(--card-bg);
             border: none;
             border-radius: 30px;
             font-weight: 500;
             cursor: pointer;
             transition: var(--transition);
+            color: var(--text-color);
+            box-shadow: var(--shadow);
         }
         
         .filter-btn.active,
@@ -616,7 +547,7 @@
         }
         
         .project-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -641,6 +572,7 @@
         .project-content h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
+            color: var(--text-color);
         }
         
         .project-content p {
@@ -657,10 +589,12 @@
         }
         
         .project-tag {
-            background: var(--secondary);
+            background: var(--card-bg);
             padding: 0.3rem 0.8rem;
             border-radius: 30px;
             font-size: 0.8rem;
+            color: var(--text-color);
+            border: 1px solid var(--primary);
         }
         
         .project-links {
@@ -668,6 +602,7 @@
             gap: 1rem;
         }
         
+        /* ===== CONTACT SECTION ===== */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -684,7 +619,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            background: white;
+            background: var(--card-bg);
             padding: 1.5rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
@@ -699,17 +634,18 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: var(--secondary);
+            background: var(--card-bg);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             color: var(--primary);
+            box-shadow: var(--shadow);
         }
         
         .contact-form {
-            background: white;
+            background: var(--card-bg);
             padding: 2rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
@@ -723,6 +659,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
+            color: var(--text-color);
         }
         
         .form-control {
@@ -732,6 +669,8 @@
             border-radius: var(--radius);
             font-family: 'Poppins', sans-serif;
             transition: var(--transition);
+            background: var(--card-bg);
+            color: var(--text-color);
         }
         
         .form-control:focus {
@@ -745,8 +684,9 @@
             resize: vertical;
         }
         
+        /* ===== FOOTER ===== */
         footer {
-            background: var(--dark);
+            background: var(--footer-bg);
             color: white;
             padding: 3rem 1rem;
             text-align: center;
@@ -812,42 +752,7 @@
             font-size: 0.9rem;
         }
         
-        .certificate-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .certificate-card {
-            background: white;
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .certificate-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .certificate-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .certificate-card p {
-            color: var(--gray);
-            margin-bottom: 1rem;
-        }
-        
-        .certificate-card a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
+        /* ===== RESPONSIVE STYLES ===== */
         @media (max-width: 992px) {
             .hero-container {
                 grid-template-columns: 1fr;
@@ -890,7 +795,22 @@
         
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--card-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 0.5s;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            
+            .nav-links.show {
+                right: 0;
             }
             
             .mobile-menu-btn {
@@ -952,12 +872,19 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
             
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
+            </button>
+            <button class="theme-toggle" id="mobile-theme-toggle">
+                <i class="fas fa-moon"></i>
             </button>
         </div>
     </header>
@@ -968,7 +895,7 @@
             <div class="hero-content">
                 <h3>Hello, I'm</h3>
                 <h1>Abhishek John Philip <span>👋</span></h1>
-                <p>Frontend Developer skilled in crafting high-performance, responsive web applications using ReactJS, Next.js, Tailwind CSS, and Node.js.</p>
+                <p>Software Developer & Full Stack Enthusiast passionate about building innovative web solutions that create real value.</p>
                 
                 <div class="hero-btns">
                     <a href="#" class="btn btn-primary">
@@ -997,7 +924,7 @@
             
             <div class="hero-img">
                 <div class="hero-img-container">
-                    <img src="assets/profile-pic (2).png" alt="Abhishek John Philip" loading="lazy">
+                    <img src="https://avatars.githubusercontent.com/u/74034797?s=400&u=8d250db9bceb4f7415526ea5b276c203f10e3fa9&v=4" alt="Abhishek John Philip" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1013,19 +940,19 @@
             
             <div class="about-container">
                 <div class="about-img-container">
-                    <img src="assets/about1.jpg" alt="Abhishek John Philip" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Abhishek John Philip" loading="lazy">
                 </div>
                 
                 <div class="about-content">
-                    <h2>Frontend Developer & Full Stack Enthusiast</h2>
-                    <p>Passionate about building intuitive user interfaces and seamless user experiences, with proven expertise in API integration, UI/UX optimization, and cross-functional team collaboration.</p>
-                    <p>Quick to adapt and always eager to learn, I've expanded my skill set into full stack development with Node.js and Express. I've gained valuable experience working as a Web Developer and through freelance projects, delivering tailored solutions to diverse clients.</p>
+                    <h2>Software Developer & Full Stack Enthusiast</h2>
+                    <p>Frontend Developer skilled in crafting high-performance, responsive web applications using ReactJS, Next.js, Tailwind CSS, SCSS, and Node.js. Passionate about building intuitive user interfaces and seamless user experiences.</p>
+                    <p>With proven expertise in API integration, UI/UX optimization, and cross-functional team collaboration, I've expanded my skill set into full stack development with Node.js and Express. I've gained valuable experience working as a Web Developer and through freelance projects, delivering tailored solutions to diverse clients.</p>
                     
                     <div class="about-info">
                         <div class="info-card">
                             <i class="fas fa-briefcase"></i>
                             <h3>Experience</h3>
-                            <p>2+ years Development</p>
+                            <p>3+ years Development</p>
                         </div>
                         
                         <div class="info-card">
@@ -1063,7 +990,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <h3>Frontend Developer</h3>
-                        <p>Dotcon Technologies | 03/2025 – Present</p>
+                        <p>Dotcon Technologies | 03/2025 – Present | Kochi</p>
                     </div>
                     <div class="experience-body">
                         <ul>
@@ -1078,7 +1005,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <h3>Web Developer</h3>
-                        <p>Bizpole Business Solutions | Jan 2024 - July 2024</p>
+                        <p>Bizpole Business Solutions Pvt Ltd | Jan 2024 - July 2024</p>
                     </div>
                     <div class="experience-body">
                         <ul>
@@ -1092,7 +1019,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <h3>Backend Developer Intern</h3>
-                        <p>Visanka Technologies | Sept 2023 - Jan 2024</p>
+                        <p>Visanka Technologies Pvt Ltd | Sept 2023 - Jan 2024</p>
                     </div>
                     <div class="experience-body">
                         <ul>
@@ -1110,9 +1037,9 @@
                     </div>
                     <div class="experience-body">
                         <ul>
-                            <li>Delivered client projects with full-cycle development using ReactJS, Node.js, MongoDB</li>
-                            <li>Designed and implemented responsive, user-friendly interfaces</li>
-                            <li>Created solutions aligned with client goals and brand identity</li>
+                            <li>Delivered client projects with full-cycle development using ReactJS, Node.js, MongoDB, and modern UI libraries</li>
+                            <li>Designed and implemented responsive, user-friendly interfaces aligned with client goals and brand identity</li>
+                            <li>Created custom websites for diverse clients across various industries</li>
                         </ul>
                     </div>
                 </div>
@@ -1144,7 +1071,7 @@
                             <div class="skill-icon">
                                 <i class="fab fa-css3-alt"></i>
                             </div>
-                            <h4>CSS3/SCSS</h4>
+                            <h4>CSS3</h4>
                             <p>Advanced</p>
                         </div>
                         
@@ -1166,18 +1093,18 @@
                         
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-css3"></i>
+                                <i class="fab fa-vuejs"></i>
                             </div>
-                            <h4>Tailwind CSS</h4>
+                            <h4>Next.js</h4>
                             <p>Advanced</p>
                         </div>
                         
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>
                             </div>
-                            <h4>Next.js</h4>
-                            <p>Intermediate</p>
+                            <h4>SCSS</h4>
+                            <p>Advanced</p>
                         </div>
                     </div>
                 </div>
@@ -1190,7 +1117,7 @@
                                 <i class="fab fa-node-js"></i>
                             </div>
                             <h4>Node.js</h4>
-                            <p>Intermediate</p>
+                            <p>Advanced</p>
                         </div>
                         
                         <div class="skill-item">
@@ -1198,7 +1125,7 @@
                                 <i class="fas fa-server"></i>
                             </div>
                             <h4>Express.js</h4>
-                            <p>Intermediate</p>
+                            <p>Advanced</p>
                         </div>
                         
                         <div class="skill-item">
@@ -1220,7 +1147,7 @@
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Tools & Others</h3>
+                    <h3>Other Technologies</h3>
                     <div class="skill-list">
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -1232,42 +1159,42 @@
                         
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-google"></i>
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <p>Intermediate</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <h4>WordPress</h4>
+                            <p>Intermediate</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h4>REST APIs</h4>
+                            <p>Expert</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-fire"></i>
                             </div>
                             <h4>Firebase</h4>
-                            <p>Intermediate</p>
+                            <p>Advanced</p>
                         </div>
                         
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-bolt"></i>
                             </div>
-                            <h4>Stripe API</h4>
+                            <h4>GSAP</h4>
                             <p>Intermediate</p>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <h4>Responsive Design</h4>
-                            <p>Expert</p>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <h4>SEO Optimization</h4>
-                            <p>Advanced</p>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                            <h4>API Integration</h4>
-                            <p>Advanced</p>
                         </div>
                     </div>
                 </div>
@@ -1296,27 +1223,27 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card" data-category="freelance">
-                    <img src="assets/projects/dreamsdwell.ca_.png" alt="DreamDwell" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="DreamDwell" class="project-img" loading="lazy">
                     <div class="project-content">
-                        <h3>Dream Dwell</h3>
-                        <p>Responsive property management platform with multi-page listings, property search, and inquiry management.</p>
+                        <h3>DreamDwell</h3>
+                        <p>A responsive property management platform with multi-page listings, property search, booking forms and inquiry management.</p>
                         <div class="project-tags">
                             <span class="project-tag">React</span>
                             <span class="project-tag">Node.js</span>
                             <span class="project-tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://dreamsdwell.ca/" class="btn btn-outline" target="_blank">Live Demo</a>
+                            <a href="https://dreamsdwell.ca/" class="btn btn-primary" target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
                 <div class="project-card" data-category="frontend">
-                    <img src="assets/projects/netflix.png" alt="Netflix Clone" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1616530940355-351fabd9526b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Netflix Clone" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>Netflix Clone</h3>
-                        <p>Dynamic UI-rich Netflix clone with carousels for categorized content and fully responsive design.</p>
+                        <p>Replica of Netflix streaming platform with movie browsing and trailer playback functionality.</p>
                         <div class="project-tags">
                             <span class="project-tag">React</span>
                             <span class="project-tag">Firebase</span>
@@ -1331,16 +1258,17 @@
                 
                 <!-- Project 3 -->
                 <div class="project-card" data-category="ecommerce">
-                    <img src="assets/projects/AmazonClone.png" alt="Amazon Clone" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Amazon Clone" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>Amazon Clone</h3>
-                        <p>Full-stack Amazon clone with Firebase Authentication and Stripe Payment Integration.</p>
+                        <p>E-commerce platform with product listings, cart functionality, and user authentication.</p>
                         <div class="project-tags">
                             <span class="project-tag">React</span>
                             <span class="project-tag">Firebase</span>
-                            <span class="project-tag">Stripe</span>
+                            <span class="project-tag">Stripe API</span>
                         </div>
                         <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/Amazon-Clone" class="btn btn-outline" target="_blank">Code</a>
                             <a href="https://clone-f9819.web.app/" class="btn btn-primary" target="_blank">Demo</a>
                         </div>
                     </div>
@@ -1348,7 +1276,7 @@
                 
                 <!-- Project 4 -->
                 <div class="project-card" data-category="fullstack">
-                    <img src="assets/projects/IndianDriversSociety.png" alt="Indian Drivers Society" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Indian Drivers Society" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>Indian Drivers Society</h3>
                         <p>Full-stack membership and vehicle registration platform with admin dashboard and data visualizations.</p>
@@ -1365,10 +1293,10 @@
                 
                 <!-- Project 5 -->
                 <div class="project-card" data-category="freelance">
-                    <img src="assets/projects/HsternDesign.png" alt="Hstren Design" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Hstren Design" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>Hstren Design</h3>
-                        <p>Sleek, user-centric e-commerce platform for a fashion brand with responsive design.</p>
+                        <p>User-centric e-commerce platform for a fashion brand with responsive design and CMS integration.</p>
                         <div class="project-tags">
                             <span class="project-tag">React</span>
                             <span class="project-tag">Material-UI</span>
@@ -1382,16 +1310,17 @@
                 
                 <!-- Project 6 -->
                 <div class="project-card" data-category="frontend">
-                    <img src="assets/projects/Veuz.png" alt="Veuz Travel Website" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Veuz Travel Website" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>Veuz Travel Website</h3>
                         <p>Interactive, animated landing website with GSAP animations and responsive design.</p>
                         <div class="project-tags">
                             <span class="project-tag">GSAP</span>
-                            <span class="project-tag">HTML/CSS</span>
                             <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive</span>
                         </div>
                         <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/Task-1-Veuz" class="btn btn-outline" target="_blank">Code</a>
                             <a href="https://task-1-veuz-abhishekjohnphilips-projects.vercel.app/" class="btn btn-primary" target="_blank">Demo</a>
                         </div>
                     </div>
@@ -1399,10 +1328,10 @@
                 
                 <!-- Project 7 -->
                 <div class="project-card" data-category="freelance">
-                    <img src="assets/projects/Habricks.png" alt="Habrick Engineers and Architects" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80" alt="Habrick Engineers and Architects" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>Habrick Engineers and Architects</h3>
-                        <p>Responsive corporate website showcasing architectural services and projects.</p>
+                        <p>Responsive corporate website for an architectural firm showcasing services and projects.</p>
                         <div class="project-tags">
                             <span class="project-tag">HTML5</span>
                             <span class="project-tag">CSS3</span>
@@ -1416,14 +1345,14 @@
                 
                 <!-- Project 8 -->
                 <div class="project-card" data-category="ecommerce">
-                    <img src="assets/projects/DailyKart.png" alt="DailyKart" class="project-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1215&q=80" alt="DailyKart" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>DailyKart</h3>
-                        <p>Scalable e-commerce platform with dynamic product rendering and shopping experience.</p>
+                        <p>Scalable e-commerce platform with dynamic product rendering and smooth shopping experience.</p>
                         <div class="project-tags">
                             <span class="project-tag">React</span>
                             <span class="project-tag">FakeStore API</span>
-                            <span class="project-tag">E-commerce</span>
+                            <span class="project-tag">Redux</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Abhishekjohnphilip/e-commerce-app" class="btn btn-outline" target="_blank">Code</a>
@@ -1433,62 +1362,21 @@
                 </div>
                 
                 <!-- Project 9 -->
-                <div class="project-card" data-category="frontend">
-                    <img src="assets/projects/Restaurant.png" alt="Bypass Bistro Restaurant" class="project-img" loading="lazy">
+                <div class="project-card" data-category="fullstack">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Bypass Bistro Restaurant" class="project-img" loading="lazy">
                     <div class="project-content">
                         <h3>Bypass Bistro Restaurant</h3>
-                        <p>Interactive restaurant website with dynamic menu display and online ordering.</p>
+                        <p>Interactive restaurant website with dynamic menu display, online ordering, and reservation forms.</p>
                         <div class="project-tags">
                             <span class="project-tag">React</span>
                             <span class="project-tag">Material-UI</span>
                             <span class="project-tag">Vite</span>
                         </div>
                         <div class="project-links">
+                            <a href="https://github.com/Abhishekjohnphilip/restaurant-app" class="btn btn-outline" target="_blank">Code</a>
                             <a href="https://bypassbistro-restaurant.vercel.app/" class="btn btn-primary" target="_blank">Demo</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates">
-        <div class="container">
-            <div class="section-title">
-                <p>Browse My</p>
-                <h1>Certificates</h1>
-            </div>
-            
-            <div class="certificate-grid">
-                <div class="certificate-card">
-                    <h3>Responsive Web Design</h3>
-                    <p>FreeCodeCamp.org</p>
-                    <a href="https://www.freecodecamp.org/certification/Abhishek_John_Philip/responsive-web-design" target="_blank">View Certificate</a>
-                </div>
-                
-                <div class="certificate-card">
-                    <h3>React.js Premium Crash Course</h3>
-                    <p>Udemy.com</p>
-                    <a href="https://www.udemy.com/certificate/UC-84f3e1ea-be7f-4880-91a1-a1922ae64c21/" target="_blank">View Certificate</a>
-                </div>
-                
-                <div class="certificate-card">
-                    <h3>FrontEnd Development Libraries</h3>
-                    <p>FreeCodeCamp.org</p>
-                    <a href="https://www.freecodecamp.org/certification/Abhishek_John_Philip/front-end-development-libraries" target="_blank">View Certificate</a>
-                </div>
-                
-                <div class="certificate-card">
-                    <h3>Node.js Premium Crash Course</h3>
-                    <p>Udemy.com</p>
-                    <a href="https://www.udemy.com/certificate/UC-0b288e4f-5691-47e6-8881-3c86f0269cc5/" target="_blank">View Certificate</a>
-                </div>
-                
-                <div class="certificate-card">
-                    <h3>JavaScript Algorithms & Data Structures</h3>
-                    <p>FreeCodeCamp.org</p>
-                    <a href="https://www.freecodecamp.org/certification/Abhishekjohnphilip/javascript-algorithms-and-data-structures" target="_blank">View Certificate</a>
                 </div>
             </div>
         </div>
@@ -1534,6 +1422,17 @@
                             <h3>WhatsApp</h3>
                             <p>+91 8606016224</p>
                             <a href="https://wa.me/+918606016224" target="_blank">Start Chat</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Adoor, Kerala, India</p>
+                            <a href="https://goo.gl/maps/9z6Z9Z9Z9Z9Z9Z9Z9" target="_blank">View on Map</a>
                         </div>
                     </div>
                 </div>
@@ -1604,8 +1503,10 @@
 
     <script>
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
         
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('show');
@@ -1696,6 +1597,41 @@
                 }
             });
         });
+        
+        // Dark/Light Mode Toggle
+        function setupThemeToggle(button) {
+            button.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                const icon = button.querySelector('i');
+                
+                if (isDarkMode) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+                
+                // Save theme preference to localStorage
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+            });
+        }
+        
+        // Initialize theme toggle for both buttons
+        setupThemeToggle(themeToggle);
+        setupThemeToggle(mobileThemeToggle);
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.querySelectorAll('.theme-toggle i').forEach(icon => {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            });
+        }
     </script>
 </body>
 </html>
