@@ -666,4 +666,7 @@ footer p {
 /* .hidden {
   display: none;
 } */
- 
+ .nextjs-icon {
+    filter: invert(36%) sepia(98%) saturate(748%)
+            hue-rotate(190deg) brightness(96%) contrast(101%);
+}
